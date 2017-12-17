@@ -1,0 +1,18 @@
+<h1>Listing articles</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @documents.each do |document| %>
+    <tr>
+      <td><%= document.nome %></td>
+      <td><%= document.pais %></td>
+      <td><%= document.email %></td>
+      <td><%= document.endereco %></td>
+      <td><%= link_to 'Show', document_path(document) %></td>
+    </tr>
+  <% end %>
+</table>
