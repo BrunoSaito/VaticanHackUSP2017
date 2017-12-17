@@ -1,3 +1,21 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Diáspora</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><%= link_to 'ONGs', controller: 'ong' %></li>
+      <li><%= link_to 'Formulário', 'documents/new' %></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to(image_tag("/images/siria.png", size:"25x20")) %></li>
+      <li><%= link_to(image_tag("/images/espanhol.jpeg", size:"25x20")) %></li>
+      <li><%= link_to(image_tag("/images/frances.jpeg", size:"25x20")) %></li>
+      <li><%= link_to(image_tag("/images/brasil.png", size:"25x20")) %></li>
+    </ul>
+  </div>
+</nav>
 
 <div class="container">
 <h1>Formulário</h1>
@@ -25,10 +43,18 @@
 
   <p>
     <%= form.label :motivo %><br>
-    <%= form.radio_button :motivo, "Guerra" %>
-	  <%= form.label :motivo1, "Guerra" %><br>
-	  <%= form.radio_button :motivo, "Fome"  %>
-	  <%= form.label :motivo2, "Fome" %>
+    <%= form.radio_button :motivo, "Conflitos militares" %>
+	<%= form.label :motivo1, "Conflitos militares" %><br>
+	<%= form.radio_button :motivo, "Discriminação sexual"  %>
+	<%= form.label :motivo2, "Discriminação sexual" %><br>
+	<%= form.radio_button :motivo, "Perseguição religiosa"  %>
+	<%= form.label :motivo2, "Perseguição religiosa" %><br>
+	<%= form.radio_button :motivo, "Catástrofe natural"  %>
+	<%= form.label :motivo2, "Catástrofe natural" %><br>
+	<%= form.radio_button :motivo, "Discriminação racial"  %>
+	<%= form.label :motivo2, "Discriminação racial" %><br>
+	<%= form.radio_button :motivo, "Perseguição política"  %>
+	<%= form.label :motivo2, "Perseguição política" %>
   </p>
 
   <p >
