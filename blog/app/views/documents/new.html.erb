@@ -1,0 +1,34 @@
+<h1>Formulário</h1>
+<%= form_with scope: :document, url: documents_path, local: true do |form| %>
+  <p>
+    <%= form.label :nome %><br>
+    <%= form.text_field :nome %>
+  </p>
+ 
+  <p>
+    <%= form.label :pais %><br>
+    <%= form.text_field :pais %>
+  </p>
+ 
+  <p>
+    <%= form.label :endereco %><br>	
+    <%= form.text_field :endereco %>
+  </p>
+
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </p>
+
+  <p>
+    <%= form.label :motivo %><br>
+    <%= form.radio_button :motivo, "motivo 1" %>
+	<%= form.label :motivo1, "motivo 1" %>
+	<%= form.radio_button :motivo, "motivo 2"  %>
+	<%= form.label :motivo2, "motivo 2" %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

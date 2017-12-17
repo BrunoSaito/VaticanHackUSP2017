@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
-  get 'documentos/index'
+  get 'mapa/index'
+
+  get 'empregos/index'
+
+  get 'portugues/index'
+
+  get 'moradia/index'
 
   get 'welcome/index'
 
-  resources :articles
+  resources :documents
   
   get 'ong/index'
-  get 'documentos/index'
 
 
   root 'welcome#index'
