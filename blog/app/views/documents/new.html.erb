@@ -1,34 +1,38 @@
+
+<div class="container">
 <h1>Formulário</h1>
+
 <%= form_with scope: :document, url: documents_path, local: true do |form| %>
   <p>
     <%= form.label :nome %><br>
-    <%= form.text_field :nome %>
+    <%= form.text_field :nome, class: "form-control" %>
   </p>
  
   <p>
     <%= form.label :pais %><br>
-    <%= form.text_field :pais %>
+    <%= form.text_field :pais, class: "form-control" %>
   </p>
  
   <p>
     <%= form.label :endereco %><br>	
-    <%= form.text_field :endereco %>
+    <%= form.text_field :endereco, class: "form-control" %>
   </p>
 
   <p>
     <%= form.label :email %><br>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: "form-control" %>
   </p>
 
   <p>
     <%= form.label :motivo %><br>
-    <%= form.radio_button :motivo, "motivo 1" %>
-	<%= form.label :motivo1, "motivo 1" %>
-	<%= form.radio_button :motivo, "motivo 2"  %>
-	<%= form.label :motivo2, "motivo 2" %>
+    <%= form.radio_button :motivo, "Guerra" %>
+	  <%= form.label :motivo1, "Guerra" %><br>
+	  <%= form.radio_button :motivo, "Fome"  %>
+	  <%= form.label :motivo2, "Fome" %>
   </p>
 
-  <p>
-    <%= form.submit %>
+  <p >
+    <%= form.submit "Submit", class: "btn btn-primary" %>
   </p>
 <% end %>
+</div>
